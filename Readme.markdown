@@ -16,4 +16,11 @@ Progress
 --------
 
 - Book reading: Chapter 2 finished.
-- Example Code: Chapter 2 finished ( not include the suggested excecises in the book )
+- Example Code: Chapter 2 finished ( not include the suggested exercises in the book )
+
+TODO
+----
+
+1. Change Switch Cam title at app start up
+2. Added explicit photo album write permission (or read write) request before snap happened.
+3. Do suggested exercises in chapter 2
