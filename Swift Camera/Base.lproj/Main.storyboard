@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--Camera Preview Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraPreviewController" customModule="Swift_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="VideoPreviewView" customModule="Swift_Camera" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ns0-OU-b1N">
+                                <rect key="frame" x="0.0" y="538" width="600" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaG-IU-9Km">
+                                        <rect key="frame" x="282" y="16" width="36" height="30"/>
+                                        <state key="normal" title="Snap">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="snap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="da7-bB-jhs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2h-ba-vc0">
+                                        <rect key="frame" x="554" y="16" width="38" height="30"/>
+                                        <state key="normal" title="Torch">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleFlashlight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Pl-21-v8E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5F-WC-UuK">
+                                        <rect key="frame" x="8" y="16" width="83" height="30"/>
+                                        <state key="normal" title="Switch Cam">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="switchCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLV-EJ-Jmp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="eaG-IU-9Km" secondAttribute="centerX" id="8nD-eE-hMX"/>
+                                    <constraint firstAttribute="height" constant="62" id="HxD-wO-wuL"/>
+                                    <constraint firstItem="b5F-WC-UuK" firstAttribute="leading" secondItem="ns0-OU-b1N" secondAttribute="leading" constant="8" id="LjK-7k-Zac"/>
+                                    <constraint firstAttribute="centerY" secondItem="b5F-WC-UuK" secondAttribute="centerY" id="Syg-oC-pHR"/>
+                                    <constraint firstAttribute="trailing" secondItem="z2h-ba-vc0" secondAttribute="trailing" constant="8" id="T5S-AA-ZCF"/>
+                                    <constraint firstAttribute="centerY" secondItem="z2h-ba-vc0" secondAttribute="centerY" id="ne7-N0-t3j"/>
+                                    <constraint firstAttribute="centerY" secondItem="eaG-IU-9Km" secondAttribute="centerY" id="wys-Iz-7U6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ns0-OU-b1N" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="0Qv-lg-XOp"/>
+                            <constraint firstItem="ns0-OU-b1N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2x6-Fa-bCb"/>
+                            <constraint firstAttribute="trailing" secondItem="ns0-OU-b1N" secondAttribute="trailing" id="G7W-YI-10s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="snapButton" destination="eaG-IU-9Km" id="Zpu-h1-bbL"/>
+                        <outlet property="switchCamButton" destination="b5F-WC-UuK" id="dgZ-Mu-XwR"/>
+                        <outlet property="toggleTorchButton" destination="z2h-ba-vc0" id="dFU-p7-Gzg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
